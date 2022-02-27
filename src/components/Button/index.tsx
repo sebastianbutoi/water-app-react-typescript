@@ -1,7 +1,14 @@
 import React from "react";
 import "./style.css";
 
-const Button = ({ text, handleClick }) => {
+type Props = {
+  text: string;
+  handleClick: () => void;
+};
+
+const Button = (props: Props): JSX.Element => {
+  const { text, handleClick } = props;
+
   return (
     <button className="btn" onClick={handleClick}>
       {text}
