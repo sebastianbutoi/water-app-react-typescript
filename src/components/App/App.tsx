@@ -3,9 +3,10 @@ import "./App.css";
 import Button from "../Button";
 import StatusBar from "../StatusBar";
 
-function App() {
+function App(): JSX.Element {
   const [counter, setCounter] = useState(0);
-  function incrementBy100() {
+
+  function incrementBy100(): void {
     if (counter < 2000) {
       setCounter(counter + 100);
     } else {
@@ -13,7 +14,7 @@ function App() {
       alert("GOOOOD JOB");
     }
   }
-  function incrementBy300() {
+  function incrementBy300(): void {
     if (counter < 2000) {
       setCounter(counter + 300);
     } else {
@@ -21,17 +22,18 @@ function App() {
       alert("GOOOOD JOB");
     }
   }
-  function reset() {
+  function reset(): void {
     setCounter(0);
   }
 
-  function calculateDate() {
+  function calculateDate(): string {
     const today = new Date();
     const dd = String(today.getDate());
     const mm = String(today.getMonth() + 1);
     const yyyy = today.getFullYear();
     return dd + "/" + mm + "/" + yyyy;
   }
+  
   return (
     <div className="App">
       <h1>Water Tracker App</h1>
