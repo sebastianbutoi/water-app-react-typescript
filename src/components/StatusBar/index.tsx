@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.css";
 
-const StatusBar = ({ innerWidth }) => {
+type Props = {
+  innerWidth: string,
+};
+
+const StatusBar = ({ innerWidth }: Props): JSX.Element => {
   return (
     <div id="wrapper">
       <div id="inner" style={{ width: innerWidth }}></div>
